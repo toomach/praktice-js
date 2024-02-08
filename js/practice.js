@@ -104,7 +104,7 @@
 // виклик функції
 // add(10, 4) - аргументи функції
 
-// -----------------------поовертання зачення функції------------
+// -----------------поовертання зачення функції------------
 // function add(x, y) {
 //   const dayTotal = x * 7;
 //   return dayTotal * y;
@@ -134,16 +134,37 @@
 // console.log(makeTransaction(3, 1000)); // "You ordered 3 droids worth 3000 credits!"
 // console.log(makeTransaction(10, 500)); // "You ordered 10 droids worth 5000 credits!"
 
-// =========================практика=============================
+// function getLastElementMeta(array) {
+//     const lastElementIndex = array.length - 1;
+//     console.log(lastElementIndex, array[lastElementIndex]);
+// return [lastElementIndex, array[lastElementIndex]];
 
-// Якщо змінна a дорівнює 10, виведіть 'Вірно', інакше виведіть 'Невірно'.
-
-// let a = 10;
-// if (a === 10) {
-//     console.log("вірно");
-// } else {
-//     console.log("невіро");
 // }
 
-const a === 10 ? "вірно" : "невірно";
-console.log(a);
+// getLastElementMeta(["apple", "peach", "pear", "banana"])
+// getLastElementMeta(["apple", "peach", "pear"])
+// getLastElementMeta(["apple", "peach"])
+// getLastElementMeta(["apple"])
+
+// function getLastElementMeta(array) {
+//     const lastElementIndex = array.length - 1;
+//     console.log(lastElementIndex, array[lastElementIndex]);
+// return [lastElementIndex, array[lastElementIndex]];
+
+// }
+
+// getLastElementMeta(["apple", "peach", "pear", "banana"])
+// getLastElementMeta(["apple", "peach", "pear"])
+// getLastElementMeta(["apple", "peach"])
+// getLastElementMeta(["apple"])
+
+// function getExtremeElements(array) {
+//     const firstIndex = array.length;
+//     const lastIndex = array.length - 1;
+//     console.log(array[0], array[array.length - 1]);
+//     console.log(lastIndex);
+// }
+
+// getExtremeElements([1, 2, 3, 4, 5])
+// getExtremeElements(["Earth", "Mars", "Venus"])
+// getExtremeElements(["apple", "peach", "pear", "banana"])
