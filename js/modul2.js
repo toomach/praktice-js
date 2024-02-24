@@ -245,6 +245,196 @@
 // console.log(toggleModalVisibility(true));
 // console.log(toggleModalVisibility(false));
 
+// =========================Методи рядків===============================
+//--------------------------Метод slice()-------------------------------
+// str.slice(startIndex, endIndex)
+// Метод slice() копіює підрядок із вихідного рядка, починаючи з індексу
+// startIndex і до(не включаючи) індексу endIndex, і повертає цю копію як
+// новий рядок.
+// const fullName = "Jacob Mercer";
+// console.log(fullName.slice(0, 4)); // 'Jaco'
+// console.log(fullName.slice(3, 9)); // 'ob Mer'
+// console.log(fullName.slice(0, fullName.length)); // 'Jacob Mercer'
+// console.log(fullName.slice(1)); // 'acob Mercer'
+// console.log(fullName.slice(3)); // 'ob Mercer'
+
+/////////////////////////////
+////////////////////////////
+// Доповни код функції так, щоб вона повертала новий підрядок, який
+// починається від початку string і має довжину length.
+// function getSubstring(string, length) {
+//     return string.slice(string, length);
+// }
+
+// console.log(getSubstring("Hello world", 3));
+// console.log(getSubstring("Hello world", 5));
+// console.log(getSubstring("Hello world", 8));
+// console.log(getSubstring("Hello world", 11));
+// console.log(getSubstring("Hello world", 0));
+
+//-------------------Методи toLowerCase() і toUpperCase()------------------
+// Методи рядків toLowerCase() та toUpperCase() використовуються для зміни
+// регістру символів у рядку.Обидва методи не змінюють вихідний рядок, а
+// повертають новий рядок у відповідному регістрі.
+// const message = "Welcome to Bahamas!";
+// console.log(message.toUpperCase());
+// console.log(message.toLowerCase());
+
+///////////////////////////
+///////////////////////////
+// Якщо значення параметра to — це рядок "upper", то функція повертала копію
+// рядка input, але у верхньому регістрі
+// В іншому разі, функція повертала копію рядка inputу нижньому регістрі
+
+// function normalizeInput(input, to) {
+//     if (to === "lower") {
+//         return input.toLowerCase();
+//     } else {
+//         return input.toUpperCase();
+// }
+// }
+
+// console.log(normalizeInput("This ISN'T SpaM", "lower"));
+// console.log(normalizeInput("This ISN'T SpaM", "upper"));
+// console.log(normalizeInput("Big SALE", "lower"));
+// console.log(normalizeInput("Big SALE", "upper"));
+// console.log(normalizeInput("Stay Awhile and Listen", "lower"));
+// console.log(normalizeInput("Stay Awhile and Listen", "upper"));
+
+// ----------------------Метод includes()---------------------------------
+// Метод рядків includes() використовується для перевірки наявності підрядка
+// у рядку.Він повертає логічне значення true, якщо підрядок знайдено,
+// і false, якщо підрядок відсутній.
+// Регістр символів у рядку й підрядку має значення.Літера a, наприклад, не
+// дорівнює літері A.
+// const username = 'Jacob Mercer';
+// console.log(username.includes('Jacob')); // true
+// console.log(username.includes('jacob')); // false
+// console.log(username.includes('Mercer')); // true
+// console.log(username.includes('mercer')); // false
+
+//////////////////////
+/////////////////////
+// Доповни тіло функції таким чином, щоб вона повертала результат перевірки
+// входження імені(параметр firstName), у повне ім'я (параметр fullName).
+// Врахуй, що регістр символів в параметрах fullName і firstName наперед не
+// відомий.Перед перевіркою входження не забудь прирівняти їх до однакового
+// регістру.
+
+// function checkForName(fullName, firstName) {
+//     return fullName.toLowerCase().includes(firstName.toLowerCase());
+// }
+
+// console.log(checkForName("Jason Neis", "Jason"));
+// console.log(checkForName("Jason Neis", "jAsOn"));
+// console.log(checkForName("Jason Neis", "Jacob"));
+// console.log(checkForName("Caty Stars", "Caty"));
+// console.log(checkForName("Caty Stars", "cAtY"));
+// console.log(checkForName("Caty Stars", "Andromeda"));
+
+//------------------Методи startsWith() і endsWith()------------------------
+// Методи startsWith() і endsWith() призначені для перевірки початку й
+// закінчення рядка відповідно.Вони повертають булеве значення true або false,
+// залежно від того, чи відповідає початок або кінець рядка заданому значенню.
+// const str = "Hello, world!";
+// console.log(str.startsWith("Hello")); // true
+// console.log(str.startsWith("hello")); // false (метод чутливий до регістру)
+// console.log(str.endsWith("world!")); // true
+// console.log(str.endsWith("World!")); // false (метод чутливий до регістру)
+
+////////////////////////
+///////////////////////
+// Якщо ім'я файлу fileName закінчується розширенням, зазначеним у параметрі
+// ext, то функція повертала рядок "File extension matches"
+// В іншому разі, функція повертала рядок "File extension does not match"
+
+// function checkFileExtension(fileName, ext) {
+//     return fileName.endsWith(ext) ? "File extension matches" : "File extension does not match";
+// }
+
+// console.log(checkFileExtension("styles.css", ".css"));
+// console.log(checkFileExtension("styles.css", ".js"));
+// console.log(checkFileExtension("app.js", ".js"));
+// console.log(checkFileExtension("app.js", ".html"));
+// console.log(checkFileExtension("index.html", ".html"));
+// console.log(checkFileExtension("index.html", ".css"));
+// console.log(checkFileExtension("index.html", ".js"));
+
+//------------------------Метод indexOf()----------------------------------
+// Метод indexOf() використовується для пошуку першого входження підрядка в
+// рядок.Він повертає:
+// індекс першого входження(індекс першого символу) підрядка, якщо він
+// знайдений або -1, якщо підрядок не виявлено
+// const message = "Welcome to Bahamas!";
+// const index = message.indexOf("to");
+// console.log(index); // 8
+// const indexx = message.indexOf("hello");
+// console.log(index); // -1
+
+//////////////////////////////
+/////////////////////////////
+// Використовуючи методи indexOf та slice, доповни код функції таким чином, щоб:
+// Вона перевіряла наявність розширення в імені файлу(назва розширення
+// відокремлюється від імені файла крапкою)
+// Якщо ім'я файлу не містить розширення, то функція повертала новий підрядок,
+// що містить ім'я файлу без змін
+// В іншому разі функція повертала підрядок з іменем файлу, але без розширення
+
+// function getFileName(file) {
+//     console.log(file.indexOf(".") !== -1);
+//     // return file.indexOf(".") !== -1 ? file.slice(0, file.indexOf(".")) : file;
+// }
+
+// console.log(getFileName("styles.css"));
+// console.log(getFileName("app.js"));
+// console.log(getFileName("app"));
+// console.log(getFileName("index.js"));
+// console.log(getFileName("index.html"));
+// console.log(getFileName("index.css"));
+// console.log(getFileName("index"));
+
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const values = ["Spacious apartment in the city center", 4, 2153];
+// const keys = Object.keys(apartment);
+
+// for (const key of keys) {
+//     // console.log(key);
+//     console.log(apartment[key]);
+// }
+
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+
+// const keys = ["descr", "rating", "price"];
+// const values = ["Spacious apartment in the city center", 4, 2153];
+
+// for (const key in apartment) {
+//     console.log(apartment[key]);
+// }
+
+
+function countTotalSalary(salaries) {
+  let totalSalary = 0;
+  const = Object.values(salaries);
+  
+  for (const values of salaries) {
+    totalSalary = 
+  }
+}
+
+
+countTotalSalary({})
+countTotalSalary({ mango: 100, poly: 150, alfred: 80 })
+countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }) 
+
+
 
 
 
