@@ -168,3 +168,61 @@
 // getExtremeElements([1, 2, 3, 4, 5])
 // getExtremeElements(["Earth", "Mars", "Venus"])
 // getExtremeElements(["apple", "peach", "pear", "banana"])
+
+// const user = {
+//   username: "Victor",
+//   showName() {
+// 		// ✅ Віктор біжить швидко, тому що він (this) намагається зловити поїзд.
+//     console.log(this.username);
+//   },
+// };
+
+// user.showName();
+
+// const pizzaPalace = {
+//   pizzas: ["Supercheese", "Smoked", "Four meats"],
+//   checkPizza(pizzaName) {
+//     return pizzas.includes(pizzaName);
+//   },
+//   order(pizzaName) {
+//     const isPizzaAvailable = this.checkPizza(pizzaName);
+
+//     if (!isPizzaAvailable) {
+//       return `Sorry, there is no pizza named «${pizzaName}»`;
+//     }
+
+//     return `Order accepted, preparing «${pizzaName}» pizza`;
+//   },
+// };
+
+// pizzaPalace.order("Four meats")
+
+// const user = {
+//   username: "Poly",
+//   showThis() {
+//     console.log(this);
+//   }
+// };
+
+// user.showThis(); // {username: "Poly", showThis: ƒ}
+
+function foo() {
+    console.log("this in showThis:", this);
+};
+
+const user = {
+    username: "Poly",
+}
+
+user.showContext = foo;
+user.showContext(); // this in showThis: {username: "Poly", showContext: ƒ}
+
+foo();
+
+
+
+
+
+
+
+
