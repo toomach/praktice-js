@@ -206,18 +206,18 @@
 
 // user.showThis(); // {username: "Poly", showThis: ƒ}
 
-function foo() {
-    console.log("this in showThis:", this);
-};
+// function foo() {
+//     console.log("this in showThis:", this);
+// };
 
-const user = {
-    username: "Poly",
-}
+// const user = {
+//     username: "Poly",
+// }
 
-user.showContext = foo;
-user.showContext(); // this in showThis: {username: "Poly", showContext: ƒ}
+// user.showContext = foo;
+// user.showContext(); // this in showThis: {username: "Poly", showContext: ƒ}
 
-foo();
+// foo();
 
 
 
